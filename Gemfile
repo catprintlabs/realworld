@@ -11,6 +11,7 @@ gem 'acts_as_follower'
 gem 'devise'
 gem 'hyper-spec', '1.0.0-lap9', source: 'https://gems.ruby-hyperloop.org'
 gem 'hyperloop', '1.0.0-lap9', source: 'https://gems.ruby-hyperloop.org'
+gem 'jwt'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.0'
 # mysql2 for database
