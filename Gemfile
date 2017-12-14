@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'acts-as-taggable-on', git: 'https://github.com/mbleigh/acts-as-taggable-on'
 gem 'devise'
 gem 'hyper-spec', '1.0.0-lap9', source: 'https://gems.ruby-hyperloop.org'
 gem 'hyperloop', '1.0.0-lap9', source: 'https://gems.ruby-hyperloop.org'
