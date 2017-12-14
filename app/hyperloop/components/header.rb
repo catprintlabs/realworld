@@ -1,4 +1,4 @@
-class BookList < Hyperloop::Component
+class Header < Hyperloop::Component
   def logged_out_view
     if current_user
       UL(class: 'nav navbar-nav pull-xs-right') do
