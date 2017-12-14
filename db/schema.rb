@@ -12,43 +12,43 @@
 
 ActiveRecord::Schema.define(version: 20171214145850) do
 
-  create_table "articles", force: :cascade do |t|
+  create_table "articles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "title"
     t.string "slug"
     t.text "body"
     t.string "description"
     t.integer "favorites_count"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["slug"], name: "index_articles_on_slug", unique: true
     t.index ["user_id"], name: "index_articles_on_user_id"
   end
 
-  create_table "comments", force: :cascade do |t|
+  create_table "comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text "body"
-    t.integer "user_id"
-    t.integer "article_id"
+    t.bigint "user_id"
+    t.bigint "article_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["article_id"], name: "index_comments_on_article_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
-  create_table "favorites", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "article_id"
+  create_table "favorites", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "user_id"
+    t.bigint "article_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["article_id"], name: "index_favorites_on_article_id"
     t.index ["user_id"], name: "index_favorites_on_user_id"
   end
 
-  create_table "follows", force: :cascade do |t|
+  create_table "follows", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "followable_type", null: false
-    t.integer "followable_id", null: false
+    t.bigint "followable_id", null: false
     t.string "follower_type", null: false
-    t.integer "follower_id", null: false
+    t.bigint "follower_id", null: false
     t.boolean "blocked", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -58,7 +58,7 @@ ActiveRecord::Schema.define(version: 20171214145850) do
     t.index ["follower_type", "follower_id"], name: "index_follows_on_follower_type_and_follower_id"
   end
 
-  create_table "hyperloop_connections", force: :cascade do |t|
+  create_table "hyperloop_connections", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "channel"
     t.string "session"
     t.datetime "created_at"
@@ -66,12 +66,12 @@ ActiveRecord::Schema.define(version: 20171214145850) do
     t.datetime "refresh_at"
   end
 
-  create_table "hyperloop_queued_messages", force: :cascade do |t|
+  create_table "hyperloop_queued_messages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text "data"
     t.integer "connection_id"
   end
 
-  create_table "taggings", force: :cascade do |t|
+  create_table "taggings", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "tag_id"
     t.string "taggable_type"
     t.integer "taggable_id"
@@ -90,13 +90,13 @@ ActiveRecord::Schema.define(version: 20171214145850) do
     t.index ["tagger_id"], name: "index_taggings_on_tagger_id"
   end
 
-  create_table "tags", force: :cascade do |t|
-    t.string "name"
+  create_table "tags", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name", collation: "utf8_bin"
     t.integer "taggings_count", default: 0
     t.index ["name"], name: "index_tags_on_name", unique: true
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -117,4 +117,9 @@ ActiveRecord::Schema.define(version: 20171214145850) do
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 
+  add_foreign_key "articles", "users"
+  add_foreign_key "comments", "articles"
+  add_foreign_key "comments", "users"
+  add_foreign_key "favorites", "articles"
+  add_foreign_key "favorites", "users"
 end

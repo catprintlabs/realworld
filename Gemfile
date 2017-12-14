@@ -12,8 +12,8 @@ gem 'hyper-spec', '1.0.0-lap9', source: 'https://gems.ruby-hyperloop.org'
 gem 'hyperloop', '1.0.0-lap9', source: 'https://gems.ruby-hyperloop.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.0'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# mysql2 for database
+gem 'mysql2'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
