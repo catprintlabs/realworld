@@ -53,6 +53,7 @@ GEM
     babel-transpiler (0.7.0)
       babel-source (>= 4.0, < 6)
       execjs (~> 2.0)
+    bcrypt (3.1.11)
     bindex (0.5.0)
     builder (3.2.3)
     byebug (9.1.0)
@@ -82,6 +83,12 @@ GEM
     concurrent-ruby (1.0.5)
     connection_pool (2.2.1)
     crass (1.0.3)
+    devise (4.3.0)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0, < 5.2)
+      responders
+      warden (~> 1.2.3)
     diff-lcs (1.3)
     equalizer (0.0.11)
     erubi (1.7.0)
@@ -208,6 +215,7 @@ GEM
       opal (~> 0.10.4)
       sprockets (~> 3.1)
       tilt (>= 1.4)
+    orm_adapter (0.5.0)
     paggio (0.2.6)
     parser (2.4.0.2)
       ast (~> 2.3)
@@ -253,6 +261,9 @@ GEM
       execjs
       railties (>= 3.2)
       tilt
+    responders (2.4.0)
+      actionpack (>= 4.2.0, < 5.3)
+      railties (>= 4.2.0, < 5.3)
     rspec-core (3.7.0)
       rspec-support (~> 3.7.0)
     rspec-expectations (3.7.0)
@@ -319,6 +330,8 @@ GEM
       equalizer (~> 0.0.9)
       parser (>= 2.3.1.2, < 2.5)
       procto (~> 0.0.2)
+    warden (1.2.7)
+      rack (>= 1.0)
     web-console (3.5.1)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -341,6 +354,7 @@ DEPENDENCIES
   byebug
   capybara (~> 2.13.0)
   coffee-rails (~> 4.2)
+  devise
   hyper-spec (= 1.0.0.pre.lap9)!
   hyperloop (= 1.0.0.pre.lap9)!
   jbuilder (~> 2.5)
