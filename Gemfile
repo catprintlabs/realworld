@@ -9,8 +9,8 @@ end
 gem 'acts-as-taggable-on', git: 'https://github.com/mbleigh/acts-as-taggable-on'
 gem 'acts_as_follower'
 gem 'devise'
-gem 'hyper-spec', '1.0.0-lap9', source: 'https://gems.ruby-hyperloop.org'
-gem 'hyperloop', '1.0.0-lap9', source: 'https://gems.ruby-hyperloop.org'
+gem 'hyper-spec', '1.0.0-lap12', source: 'https://gems.ruby-hyperloop.org'
+gem 'hyperloop', '1.0.0-lap12', source: 'https://gems.ruby-hyperloop.org'
 gem 'jwt'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.0'
@@ -54,6 +54,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'opal_hot_reloader', git: 'https://github.com/catprintlabs/opal-hot-reloader.git'
+  gem 'foreman'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
