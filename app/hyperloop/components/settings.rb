@@ -30,6 +30,7 @@ class Settings < Hyperloop::Component
                 BUTTON(class: 'btn btn-lg btn-primary pull-xs-right') { 'Update Settings' }
               end
             end
+            BUTTON(class: 'btn btn-outline-danger') { 'Or click here to logout' }
           end
         end
       end
