@@ -22,7 +22,9 @@ class Editor < Hyperloop::Component
                   INPUT(class: 'form-control',
                         placeholder: 'Enter tags')
                   DIV(class: 'tag-list') do
-                    #tags go here
+                    SPAN(class: 'tag-default tag-pill') do
+                      I(class: 'ion-close-round') { 'Tag' }
+                    end
                   end
                 end
                 BUTTON(class: 'btn btn-lg pull-xs-right btn-primary') { 'Publish Article' }

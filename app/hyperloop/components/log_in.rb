@@ -5,6 +5,7 @@ class LogIn < Hyperloop::Component
         DIV(class: 'col-md-6 offset-md-3 col-xs-12') do
           H1(class: 'text-xs-center') { 'Sign In' }
           P(class: 'text-xs-center') { 'Need an Account?' }
+          ListErrors()
           FORM() do
             FIELDSET(class: 'form-group') do
               INPUT(class: 'form-control form-control-lg',

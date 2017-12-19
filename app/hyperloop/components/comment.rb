@@ -11,6 +11,7 @@ class Comment < Hyperloop::Component
         end
         A(class: 'comment-author')
         SPAN(class: 'date-posted') { Time.now.strftime("%m/%d/%Y") }
+        DeleteButton()
       end
     end
   end

@@ -4,6 +4,9 @@ class Profile < Hyperloop::Component
     LINK(class: 'btn btn-sm btn-outline-secondary action-btn') do
       I(class: 'ion-gear-a') { 'Edit Profile Settings' }
     end
+    BUTTON() do
+      I(class: 'ion-plis-round') { 'Follow' }
+    end
     UL(class: 'nav nav-pills outline-active') do
       LI(class: 'nav-item') do
         LINK(class: 'nav-link active') { 'My Articles' }
@@ -28,6 +31,7 @@ class Profile < Hyperloop::Component
         DIV(class: 'row') do
           DIV(class: 'col-xs-12 col-md-10 offset-md-1') do
             DIV(class: 'articles-toggle')
+            ArticleList()
           end
         end
       end
