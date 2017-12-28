@@ -16,3 +16,4 @@
 //= require jquery
 //= require jquery_ujs
 //= require hyperloop-loader
+Opal.OpalHotReloader.$listen(3001, false, 1) // optional (port, false, poll_seconds) i.e. (8081, false, 1)

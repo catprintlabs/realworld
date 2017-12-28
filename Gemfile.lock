@@ -1,4 +1,12 @@
 GIT
+  remote: https://github.com/catprintlabs/opal-hot-reloader.git
+  revision: a2870873fea44aababb410d1e5ec60f0b40a69a2
+  specs:
+    opal_hot_reloader (0.1.4)
+      listen (~> 3.0)
+      websocket
+
+GIT
   remote: https://github.com/mbleigh/acts-as-taggable-on
   revision: 38fefffc8f104455f87fdccd77841a2f550b16c6
   specs:
@@ -98,42 +106,46 @@ GEM
       responders
       warden (~> 1.2.3)
     diff-lcs (1.3)
+    dotenv (0.7.0)
     equalizer (0.0.11)
     erubi (1.7.0)
     execjs (2.7.0)
     ffi (1.9.18)
+    foreman (0.64.0)
+      dotenv (~> 0.7.0)
+      thor (>= 0.13.6)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     hike (1.2.3)
-    hyper-component (1.0.0.pre.lap9)
+    hyper-component (1.0.0.pre.lap12)
       actionview (>= 4.0.0)
-      hyper-react (= 1.0.0.pre.lap9)
-      hyperloop-config (= 1.0.0.pre.lap9)
+      hyper-react (= 1.0.0.pre.lap12)
+      hyperloop-config (= 1.0.0.pre.lap12)
       opal-rails (~> 0.9.3)
       react-rails (>= 2.3.0, < 2.5.0)
-    hyper-mesh (1.0.0.pre.lap9)
+    hyper-mesh (1.0.0.pre.lap12)
       activerecord (>= 4.0.0)
-      hyper-component (= 1.0.0.pre.lap9)
-      hyper-operation (= 1.0.0.pre.lap9)
-    hyper-model (1.0.0.pre.lap9)
-      hyper-mesh (= 1.0.0.pre.lap9)
-    hyper-operation (1.0.0.pre.lap9)
+      hyper-component (= 1.0.0.pre.lap12)
+      hyper-operation (= 1.0.0.pre.lap12)
+    hyper-model (1.0.0.pre.lap12)
+      hyper-mesh (= 1.0.0.pre.lap12)
+    hyper-operation (1.0.0.pre.lap12)
       activerecord (>= 4.0.0)
-      hyper-component (= 1.0.0.pre.lap9)
-      hyperloop-config (= 1.0.0.pre.lap9)
+      hyper-component (= 1.0.0.pre.lap12)
+      hyperloop-config (= 1.0.0.pre.lap12)
       mutations
       opal-activesupport
-    hyper-react (1.0.0.pre.lap9)
-      hyper-store (= 1.0.0.pre.lap9)
+    hyper-react (1.0.0.pre.lap12)
+      hyper-store (= 1.0.0.pre.lap12)
       opal (~> 0.10.5)
       opal-activesupport (~> 0.3.0)
-    hyper-router (4.2.6.pre.lap9)
-      hyper-component (= 1.0.0.pre.lap9)
-      hyper-react (= 1.0.0.pre.lap9)
+    hyper-router (4.2.6.pre.lap12)
+      hyper-component (= 1.0.0.pre.lap12)
+      hyper-react (= 1.0.0.pre.lap12)
       opal-browser (~> 0.2.0)
       opal-rails (~> 0.9.3)
       react-rails (>= 2.3.0, < 2.5.0)
-    hyper-spec (1.0.0.pre.lap9)
+    hyper-spec (1.0.0.pre.lap12)
       capybara
       chromedriver-helper
       opal (~> 0.10.5)
@@ -145,19 +157,19 @@ GEM
       uglifier
       unparser
       webdrivers
-    hyper-store (1.0.0.pre.lap9)
-      hyperloop-config (= 1.0.0.pre.lap9)
+    hyper-store (1.0.0.pre.lap12)
+      hyperloop-config (= 1.0.0.pre.lap12)
       opal (~> 0.10.5)
-    hyperloop (1.0.0.pre.lap9)
-      hyper-model (= 1.0.0.pre.lap9)
-      hyper-router (= 4.2.6.pre.lap9)
-      hyperloop-config (= 1.0.0.pre.lap9)
+    hyperloop (1.0.0.pre.lap12)
+      hyper-model (= 1.0.0.pre.lap12)
+      hyper-router (= 4.2.6.pre.lap12)
+      hyperloop-config (= 1.0.0.pre.lap12)
       mini_racer (~> 0.1.14)
       opal-browser (~> 0.2.0)
       opal-rails (~> 0.9.3)
       rails (>= 4.0.0)
       react-rails (>= 2.3.0, < 2.5.0)
-    hyperloop-config (1.0.0.pre.lap9)
+    hyperloop-config (1.0.0.pre.lap12)
       opal (~> 0.10.5)
       opal-browser (~> 0.2.0)
       uglifier
@@ -350,6 +362,7 @@ GEM
       nokogiri (~> 1.6)
       rubyzip (~> 1.0)
       selenium-webdriver (~> 3.0)
+    websocket (1.2.5)
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.3)
@@ -366,12 +379,14 @@ DEPENDENCIES
   capybara (~> 2.13.0)
   coffee-rails (~> 4.2)
   devise
-  hyper-spec (= 1.0.0.pre.lap9)!
-  hyperloop (= 1.0.0.pre.lap9)!
+  foreman
+  hyper-spec (= 1.0.0.pre.lap12)!
+  hyperloop (= 1.0.0.pre.lap12)!
   jbuilder (~> 2.5)
   jwt
   listen (>= 3.0.5, < 3.2)
   mysql2
+  opal_hot_reloader!
   puma (~> 3.7)
   rails (~> 5.1.0)
   sass-rails (~> 5.0)
