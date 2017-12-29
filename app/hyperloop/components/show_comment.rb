@@ -1,5 +1,5 @@
 #broken
-class Comment < Hyperloop::Component
+class ShowComment < Hyperloop::Component
   render do
     DIV(class: 'card') do
       DIV(class: 'card-block') do
