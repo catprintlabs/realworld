@@ -19,7 +19,11 @@ class MainView < Hyperloop::Component
           # TagFilterTab
         end
       end
+<<<<<<< HEAD
       ArticleList()
+=======
+      # ArticleList()
+>>>>>>> 75849457c740a755939f430f74a5fe7e8956d38f
     end
   end
 end
