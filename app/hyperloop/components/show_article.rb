@@ -1,4 +1,4 @@
-class Article < Hyperloop::Component
+class ShowArticle < Hyperloop::Component
   render(DIV, class: 'article-page') do
     DIV(class: 'banner') do
       DIV(class: 'container') do

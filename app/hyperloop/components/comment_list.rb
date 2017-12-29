@@ -1,5 +1,5 @@
 class CommentList < Hyperloop::Component
   render(DIV) do
-    Comment()
+    ShowComment()
   end
 end
