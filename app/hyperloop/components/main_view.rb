@@ -19,7 +19,7 @@ class MainView < Hyperloop::Component
           # TagFilterTab
         end
       end
-      # ArticleList
+      ArticleList()
     end
   end
 end
