@@ -1,5 +1,5 @@
 class ListErrors < Hyperloop::Component
-  render() do
+  render do
     UL(class: 'error-messages') do
       LI() { 'Key' }
     end

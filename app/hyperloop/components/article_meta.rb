@@ -5,7 +5,7 @@ class ArticleMeta < Hyperloop::Component
     end
     DIV(class: 'info') do
       A(class: 'author') { article.author.username }
-      SPAN(class: 'date') { Time.now.strftime("%m/%d/%Y") }
+      SPAN(class: 'date') { Time.now.strftime('%m/%d/%Y') }
     end
     ArticleActions()
   end

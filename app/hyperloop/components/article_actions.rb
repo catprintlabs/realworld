@@ -1,5 +1,5 @@
 class ArticleActions < Hyperloop::Component
-  render() do
+  render do
     SPAN() do
       A(class: 'btn btn-outline-secondary btn-sm') do
         I(class: 'ion-edit') { 'Edit Article' }

@@ -1,5 +1,5 @@
 class Banner < Hyperloop::Component
-  render() do
+  render do
     unless AppStore.token
       DIV(class: 'banner') do
         DIV(class: 'container') do

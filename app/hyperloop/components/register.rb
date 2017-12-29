@@ -19,7 +19,7 @@ class Register < Hyperloop::Component
               INPUT(class: 'form-control form-control-lg',
                     placeholder: 'Password')
             end
-            BUTTON(class: 'btn btn-lg btn-primary pull-xs-right') { 'Sign Up'}
+            BUTTON(class: 'btn btn-lg btn-primary pull-xs-right') { 'Sign Up' }
           end
         end
       end
