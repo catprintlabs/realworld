@@ -1,7 +1,12 @@
 class Header < Hyperloop::Component
   def logged_out_view
+<<<<<<< HEAD
     if User == nil # for testing cuz theres no users yet
       UL(class: 'nav navbar-nav pull-xs-right') do
+=======
+    unless current_user
+      render(UL, class: 'nav navbar-nav pull-xs-right') do
+>>>>>>> 0cb56a34c0a2bade20e28d3f0ee7f49c0f201041
         LI(class: 'nav-item') do
           A(class: 'nav-link') { 'Home' }
         end

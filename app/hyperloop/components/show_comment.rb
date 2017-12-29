@@ -10,7 +10,7 @@ class ShowComment < Hyperloop::Component
           IMG(class: 'comment-author-img')
         end
         A(class: 'comment-author')
-        SPAN(class: 'date-posted') { Time.now.strftime("%m/%d/%Y") }
+        SPAN(class: 'date-posted') { Time.now.strftime('%m/%d/%Y') }
         DeleteButton()
       end
     end

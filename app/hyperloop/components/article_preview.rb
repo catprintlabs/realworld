@@ -7,7 +7,7 @@ class ArticlePreview < Hyperloop::Component
       DIV(class: 'info') do
         A(class: 'author') { 'Username' }
       end
-      SPAN(class: 'date') { Time.now.strftime("%m/%d/%Y") }
+      SPAN(class: 'date') { Time.now.strftime('%m/%d/%Y') }
       DIV(class: 'pull-xs-right') do
         BUTTON() do
           I(class: 'ion-heart') { 'Favorites Count' }
