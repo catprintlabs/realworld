@@ -1,6 +1,5 @@
 class Home < Hyperloop::Component
   render(DIV, class: 'home-page') do
-    Header()
     Banner()
     DIV(class: 'container page') do
       DIV(class: 'row') do
